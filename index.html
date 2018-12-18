@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/ddc5a536/cloudflare-static/rocket.min.js"></script>
+  </head>
+  <body>
+    <body>
+    <div onload="changecolor()" class="jimchange" id="jimchange">
+    DYMOfficial
+    <div class="player">
+    <a onclick="togglePlay()" href="javascript:void(0)">Play/Pause music</a>
+    <p class="credits">Made by Jimmy</p>
+    </div>
+    </div>
+    <audio id="myAudio" src="song.mp3" autoplay="autoplay" loop="loop">
+    </audio>
+    <script type="text/javascript">
+      var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+  if (isPlaying) {
+    myAudio.pause()
+  } else {
+    myAudio.play();
+  }
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+    </script>
+    <script type="text/javascript">
+         var imageWidthHalf, imageHeightHalf;
+         var canvas = document.createElement( 'canvas' );
+             canvas.width = window.innerWidth;
+             canvas.height = window.innerHeight;
+             canvas.style.display = 'block';
+             document.body.appendChild( canvas );
+         var context = canvas.getContext( '2d' );
+         var image = document.createElement( 'img' );
+
+             image.addEventListener('load', function() {
+                 imageWidthHalf = Math.floor( this.width / 2 );
+                 imageHeightHalf = Math.floor( this.height / 2 );
+                 document.addEventListener( 'mousemove', onMouseEvent, false ); //mouseclick ?
+             }   , false );
+
+         image.src ="cir.png"
+
+                              //mouseclick ?
+         function onMouseEvent( event ) {
+             context.drawImage( image, event.clientX - imageWidthHalf , event.clientY - imageHeightHalf );
+         }
+
+
+     </script>
+  </body>
+</html>
