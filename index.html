@@ -50,6 +50,7 @@ myAudio.onpause = function() {
                  imageWidthHalf = Math.floor( this.width / 2 );
                  imageHeightHalf = Math.floor( this.height / 2 );
                  document.addEventListener( 'mousemove', onMouseEvent, false ); //mouseclick ?
+                 document.addEventListener( 'mousedown', changeImage, false );
              }   , false );
 
          image.src ="x1.png"
@@ -58,7 +59,10 @@ myAudio.onpause = function() {
          function onMouseEvent( event ) {
              context.drawImage( image, event.clientX - imageWidthHalf , event.clientY - imageHeightHalf );
          }
-
+          
+         function changeImage() {
+          image.src = "cir.png"; 
+         }
 
      </script>
   </body>
