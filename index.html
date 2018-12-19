@@ -8,12 +8,12 @@
   </head>
   
     <body ondragstart="return false;" ondrop="return false;">
-    <div onload="changecolor()" class="jimchange" id="jimchange">
+    <div  onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" onload="changecolor()" class="jimchange" id="jimchange">
     RIP TRIPLE X
     <div class="player">
-    <a onclick="togglePlay()" href="javascript:void(0)">Play/Pause music</a>
-    <p class="credits">Made by Jimmy</p>
-      <p class="credits">Shoutout to Rohan and Harry</p>
+    <a  onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" onclick="togglePlay()" href="javascript:void(0)">Play/Pause music</a>
+    <p class="credits"  onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">Made by Jimmy</p>
+      <p class="credits"  onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false">Shoutout to Rohan and Harry</p>
     </div>
     </div>
     <audio id="myAudio" src="song1.mp3" autoplay="autoplay" loop="loop">
