@@ -49,7 +49,7 @@ myAudio.onpause = function() {
              image.addEventListener('load', function() {
                  imageWidthHalf = Math.floor( this.width / 2 );
                  imageHeightHalf = Math.floor( this.height / 2 );
-                 document.addEventListener( 'mousedown', onMouseEvent, false ); //mouseclick ?
+                 document.addEventListener( 'mousemove', onMouseEvent, false ); //mouseclick ?
              }   , false );
 
          image.src ="cir.png"
