@@ -51,6 +51,7 @@ myAudio.onpause = function() {
                  imageHeightHalf = Math.floor( this.height / 2 );
                  document.addEventListener( 'mousemove', onMouseEvent, false ); //mouseclick ?
                  document.addEventListener( 'mousedown', changeImage, false );
+               document.addEventListener( 'mouseup', changeImage1, false );
              }   , false );
 
          image.src ="x1.png"
@@ -62,6 +63,9 @@ myAudio.onpause = function() {
           
          function changeImage() {
           image.src = "cir.png"; 
+         }
+      function changeImage1() {
+          image.src = "x1.png"; 
          }
 
      </script>
